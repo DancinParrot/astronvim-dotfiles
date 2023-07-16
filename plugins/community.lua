@@ -11,4 +11,5 @@ return {
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.python" },
   -- { import = "astrocommunity.pack.php" },
+  { import = "astrocommunity.utility.transparent-nvim" },
 }

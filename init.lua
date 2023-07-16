@@ -69,9 +69,11 @@ return {
   -- augroups/autocommands and custom filetypes also this just pure lua so
   -- anything that doesn't fit in the normal config locations above can go here
   polish = function()
+    -- Enable transparency on launch
+    vim.cmd(":TransparentEnable")
     -- An image may be set as the terminal background
     -- Set background to transparent
-    vim.t.is_transparent = 0
+    --[[ vim.t.is_transparent = 0
     function toggle_transparent()
         if vim.t.is_transparent == 0 then
             vim.api.nvim_set_hl(0, "Normal", {guibg = NONE; ctermbg = NONE})
@@ -82,6 +84,8 @@ return {
             vim.api.nvim_set_hl(0, "LineNr", {})
             vim.api.nvim_set_hl(0, "SignColumn", {})
             vim.api.nvim_set_hl(0, "StatusLine", {})
+            vim.api.nvim_set_hl(0, "WinBar", {})
+            vim.api.nvim_set_hl(0, "WinBarNC", {})
             vim.api.nvim_set_hl(0, "NeoTreeNormal", {guibg = NONE; ctermbg = NONE})
             vim.api.nvim_set_hl(0, "NeoTreeNormalNC", {guibg = NONE; ctermbg = NONE})
             vim.t.is_transparent = 1
@@ -90,7 +94,7 @@ return {
             vim.t.is_transparent = 0
         end
     end
-    toggle_transparent()
+    toggle_transparent() ]]
     -- Set up custom filetypes
     -- vim.filetype.add {
     --   extension = {
