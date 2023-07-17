@@ -20,7 +20,7 @@ return {
       filtered_items = {
         visible = true,
       },
-      follow_current_file = false,
+      follow_current_file = true,
       --[[ window = {
         mappings = {
           ["/"] = "noop",
@@ -34,7 +34,7 @@ return {
       }, ]]
     },
     buffers = {
-      follow_current_file = false,
+      follow_current_file = true,
     },
     source_selector = {
       -- having these both false just show normal file path in neo-tree
